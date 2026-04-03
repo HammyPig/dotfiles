@@ -124,6 +124,29 @@ FINDER_PLIST="$HOME/Library/Preferences/com.apple.finder.plist"
 killall Dock WindowManager sharingd Finder 2>/dev/null || true
 
 ###############################################################################
+# Homebrew                                                                    #
+###############################################################################
+
+command -v brew > /dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install git
+
+casks=(
+    affinity-photo
+    cursor
+    firefox
+    onlyoffice
+    protonvpn
+    signal
+    spotify
+    vlc
+)
+
+for cask in "${casks[@]}"; do
+    brew install --cask --adopt "$cask"
+done
+
+###############################################################################
 # Manual steps                                                                #
 ###############################################################################
 
@@ -145,11 +168,6 @@ prompt_user "Customize Finder toolbar: Finder: Customize toolbar to keep only th
 
 prompt_user "Set up Find My: Sign in to iCloud and enable Find My"
 
-[[ -d "/Applications/Firefox.app" ]] || prompt_user "Install Firefox: https://www.privacyguides.org/en/desktop-browsers/#firefox"
 prompt_user "Sign in to your Firefox account so bookmarks, passwords, and extensions sync."
 prompt_user "Install and enable your NextDNS profile: download the configuration/profile from your NextDNS account and install it in System Settings > VPN, DNS & Profiles."
 
-[[ -d "/Applications/Cursor.app" ]] || prompt_user "Install Cursor: https://cursor.sh"
-
-command -v brew > /dev/null 2>&1 || prompt_user "Install Homebrew: https://brew.sh (run the install command there, then add to PATH if needed)."
-command -v git  > /dev/null 2>&1 || prompt_user "Install Git: run 'brew install git' (after Homebrew is on your PATH)."
