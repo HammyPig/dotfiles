@@ -1,0 +1,16 @@
+# Theme
+catppuccin.catppuccin-vsc
+catppuccin.catppuccin-vsc-icons
+
+# Extensions
+anthropic.claude-code
+eamodio.gitlens
+oxc.oxc-vscode
+# anysphere.cursorpyright
+# charliermarsh.ruff
+# ms-python.debugpy
+# ms-python.python
+# ms-toolsai.jupyter
+# ms-toolsai.jupyter-renderers
+# ms-toolsai.vscode-jupyter-cell-tags
+# ms-toolsai.vscode-jupyter-slideshow

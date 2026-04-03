@@ -1,0 +1,11 @@
+{
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.tabSize": 2,
+  "window.commandCenter": true,
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.preferredHighContrastLightColorTheme": "Catppuccin Macchiato",
+  "claudeCode.preferredLocation": "panel",
+}
